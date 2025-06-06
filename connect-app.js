@@ -169,19 +169,20 @@ class ConnectApp {
 // Translation data
 const translations = {
   vi: {
-    'title': 'AI Engineer | Full Stack Developer',
-    'bio': 'Xin chào! Mình là Tùng, đam mê công nghệ AI và phát triển phần mềm. Hãy kết nối với mình để cùng chia sẻ và phát triển nhé! 🚀',
+    'title': 'AI Engineer | Developer',
+    'bio': 'Xin chào! Mình là Tùng, Hãy kết nối với mình nhé! 🚀',
     'location': 'Hà Nội, Việt Nam',
     'years-coding': 'Năm lập trình',
     'projects': 'Dự án',
     'technologies': 'Công nghệ',
     'connect-title': 'Kết Nối Với Mình',
-    'scan-qr': 'Quét mã QR',
+    'scan-qr': 'Kết nối tới Zalo',
     'call-me': 'Gọi cho mình',
     'download-vcard': 'Tải danh thiếp',
     'share-profile': 'Chia sẻ trang',
     'zalo-qr-title': 'Quét mã để thêm Zalo',
-    'qr-instruction': 'Mở Zalo → Quét mã QR để kết bạn',
+    'qr-instruction': 'Mở Zalo → Quét mã QR để kết bạn. Hoặc:',
+    'zalo-add-now': 'Gửi yêu cầu ngay',
     'footer-text': '© 2024 Phạm Thanh Tùng. Made with ❤️',
     'copied': 'Đã sao chép!',
     'profile-shared': 'Đã chia sẻ link!',
@@ -194,19 +195,20 @@ const translations = {
     'pwa-instructions': 'iOS: Nhấn nút Share > Add to Home Screen\nAndroid: Menu ⋮ > Add to Home Screen'
   },
   en: {
-    'title': 'AI Engineer | Full Stack Developer',
-    'bio': 'Hi! I\'m Tung, passionate about AI technology and software development. Let\'s connect and grow together! 🚀',
+    'title': 'AI Engineer | Developer',
+    'bio': 'Hello! I\'m Tung, let\'s connect! 🚀',
     'location': 'Hanoi, Vietnam',
     'years-coding': 'Years coding',
     'projects': 'Projects',
     'technologies': 'Technologies',
     'connect-title': 'Connect With Me',
-    'scan-qr': 'Scan QR Code',
+    'scan-qr': 'Connect to Zalo',
     'call-me': 'Call me',
     'download-vcard': 'Download Contact',
     'share-profile': 'Share profile',
     'zalo-qr-title': 'Scan to add Zalo',
-    'qr-instruction': 'Open Zalo → Scan QR code to connect',
+    'qr-instruction': 'Open Zalo → Scan QR code to connect. Or:',
+    'zalo-add-now': 'Add friend now',
     'footer-text': '© 2024 Pham Thanh Tung. Made with ❤️',
     'copied': 'Copied!',
     'profile-shared': 'Profile link shared!',
@@ -279,7 +281,7 @@ N:Phạm;Thanh Tùng;;;
 EMAIL:tungpham010203@gmail.com
 TEL:+84xxxxxxxxx
 URL:https://github.com/phamthanhtung35NB
-NOTE:AI Engineer | Full Stack Developer
+NOTE:AI Engineer | Developer
 END:VCARD`;
 
   const blob = new Blob([vcard], { type: 'text/vcard' });
@@ -428,7 +430,7 @@ function saveToHomeScreen() {
 // Download all info as text file
 function downloadAllInfo() {
   const info = `PHẠM THANH TÙNG
-AI Engineer | Full Stack Developer
+AI Engineer | Developer
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 📧 Email: tungpham010203@gmail.com
