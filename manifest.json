@@ -1,7 +1,7 @@
 {
   "name": "Phạm Thanh Tùng - Connect",
   "short_name": "Tung Connect",
-  "description": "Kết nối với Phạm Thanh Tùng - AI Engineer",
+  "description": "Kết nối với Phạm Thanh Tùng",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0f172a",
@@ -26,7 +26,7 @@
       "name": "Gọi điện",
       "short_name": "Call",
       "description": "Gọi cho Tùng",
-      "url": "tel:+84xxxxxxxxx",
+      "url": "tel:+84356956489",
       "icons": [{"src": "img/phone-icon.png", "sizes": "96x96"}]
     },
     {

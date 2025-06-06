@@ -259,7 +259,7 @@ function shareProfile() {
   if (navigator.share) {
     navigator.share({
       title: 'Phạm Thanh Tùng - Connect With Me',
-      text: 'Connect with Tung - AI Engineer & Developer',
+      text: 'Connect with Tung',
       url: window.location.href
     }).then(() => {
       showToast(translations[app.currentLang]['profile-shared']);
@@ -279,9 +279,8 @@ VERSION:3.0
 FN:Phạm Thanh Tùng
 N:Phạm;Thanh Tùng;;;
 EMAIL:tungpham010203@gmail.com
-TEL:+84xxxxxxxxx
+TEL: +84356956489
 URL:https://github.com/phamthanhtung35NB
-NOTE:AI Engineer | Developer
 END:VCARD`;
 
   const blob = new Blob([vcard], { type: 'text/vcard' });
@@ -430,12 +429,12 @@ function saveToHomeScreen() {
 // Download all info as text file
 function downloadAllInfo() {
   const info = `PHẠM THANH TÙNG
-AI Engineer | Developer
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 📧 Email: tungpham010203@gmail.com
-📱 Phone: +84xxxxxxxxx
+📱 Phone: +84356956489
 📍 Location: Hà Nội, Việt Nam
+🏙  Hometown: Hoa Lư, Ninh Bình
 🎓 Education: VNU-UET
 📅 Born: 2004
 
@@ -445,8 +444,8 @@ SOCIAL LINKS
 💼 LinkedIn: linkedin.com/in/phamthanhtung35nb
 💻 GitHub: github.com/phamthanhtung35NB
 📱 Zalo: (Scan QR Code)
-📷 Instagram: @username
-🎮 Discord: username#0000
+📷 Instagram: instagram.com/phamthanhtung35nb
+🎮 Discord: phamthanhtung35nb
 
 ABOUT ME
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -575,3 +574,4 @@ document.addEventListener('dragstart', (e) => {
     e.preventDefault();
   }
 });
+
