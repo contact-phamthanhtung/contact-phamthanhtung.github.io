@@ -1,0 +1,40 @@
+{
+  "name": "Phạm Thanh Tùng - Connect",
+  "short_name": "Tung Connect",
+  "description": "Kết nối với Phạm Thanh Tùng - AI Engineer",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#667eea",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "img/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "img/icon-512.png", 
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Gọi điện",
+      "short_name": "Call",
+      "description": "Gọi cho Tùng",
+      "url": "tel:+84xxxxxxxxx",
+      "icons": [{"src": "img/phone-icon.png", "sizes": "96x96"}]
+    },
+    {
+      "name": "Gửi Email",
+      "short_name": "Email",
+      "description": "Gửi email cho Tùng",
+      "url": "mailto:tungpham010203@gmail.com",
+      "icons": [{"src": "img/email-icon.png", "sizes": "96x96"}]
+    }
+  ]
+}

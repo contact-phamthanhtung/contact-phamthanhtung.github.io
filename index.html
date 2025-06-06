@@ -3,579 +3,306 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Phạm Thanh Tùng - Kết Nối Với Tôi</title>
+  <title>Phạm Thanh Tùng - Connect With Me</title>
   
   <!-- SEO Meta Tags -->
   <meta name="description" content="Kết nối với Phạm Thanh Tùng - AI Engineer. Liên hệ qua Facebook, LinkedIn, GitHub, Zalo và nhiều kênh khác.">
   <meta name="keywords" content="Phạm Thanh Tùng, AI Engineer, Contact, Liên hệ, Kết nối">
+  <meta name="author" content="Phạm Thanh Tùng">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Phạm Thanh Tùng - Connect With Me">
+  <meta property="og:description" content="AI Engineer | Developer - Kết nối với tôi qua nhiều kênh khác nhau">
+  <meta property="og:image" content="img/tung.png">
+  <meta property="og:type" content="website">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="img/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="img/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="img/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png" />
   
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    :root {
-      --primary: #6366f1;
-      --primary-dark: #4f46e5;
-      --secondary: #8b5cf6;
-      --accent: #ec4899;
-      --bg-dark: #0f172a;
-      --bg-card: rgba(30, 41, 59, 0.5);
-      --text-primary: #f1f5f9;
-      --text-secondary: #94a3b8;
-      --gradient: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--bg-dark);
-      color: var(--text-primary);
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow-x: hidden;
-      position: relative;
-    }
-
-    /* Animated Background */
-    body::before {
-      content: '';
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: 
-        radial-gradient(circle at 20% 50%, rgba(99, 102, 241, 0.2) 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.2) 0%, transparent 50%),
-        radial-gradient(circle at 40% 20%, rgba(236, 72, 153, 0.1) 0%, transparent 50%);
-      z-index: -1;
-      animation: float 20s ease-in-out infinite;
-    }
-
-    @keyframes float {
-      0%, 100% { transform: translate(0, 0) rotate(0deg); }
-      33% { transform: translate(-20px, -20px) rotate(1deg); }
-      66% { transform: translate(20px, -10px) rotate(-1deg); }
-    }
-
-    .container {
-      max-width: 600px;
-      width: 90%;
-      padding: 2rem;
-      animation: fadeInUp 0.8s ease;
-    }
-
-    /* Profile Section */
-    .profile-section {
-      text-align: center;
-      margin-bottom: 3rem;
-    }
-
-    .profile-image {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      margin: 0 auto 1.5rem;
-      position: relative;
-      animation: fadeIn 1s ease;
-    }
-
-    .profile-image img {
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid var(--bg-dark);
-    }
-
-    .profile-image::before {
-      content: '';
-      position: absolute;
-      inset: -4px;
-      background: var(--gradient);
-      border-radius: 50%;
-      z-index: -1;
-      animation: rotate 10s linear infinite;
-    }
-
-    @keyframes rotate {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
-    }
-
-    .profile-name {
-      font-size: 2.5rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-      background: var(--gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .profile-title {
-      font-size: 1.2rem;
-      color: var(--text-secondary);
-      margin-bottom: 1rem;
-    }
-
-    .profile-bio {
-      color: var(--text-secondary);
-      line-height: 1.6;
-      margin-bottom: 1rem;
-    }
-
-    .profile-info {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      flex-wrap: wrap;
-      font-size: 0.9rem;
-      color: var(--text-secondary);
-    }
-
-    .info-item {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .info-item i {
-      color: var(--primary);
-    }
-
-    /* Connect Section */
-    .connect-section {
-      background: var(--bg-card);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(148, 163, 184, 0.1);
-      border-radius: 20px;
-      padding: 2rem;
-      margin-bottom: 2rem;
-    }
-
-    .section-title {
-      font-size: 1.5rem;
-      font-weight: 600;
-      text-align: center;
-      margin-bottom: 1.8rem;
-      position: relative;
-    }
-
-    .section-title::after {
-      content: '';
-      position: absolute;
-      bottom: -8px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 60px;
-      height: 3px;
-      background: var(--gradient);
-      border-radius: 2px;
-    }
-
-    /* Contact Grid */
-    .contact-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 1rem;
-    }
-
-    .contact-card {
-      background: rgba(99, 102, 241, 0.1);
-      border: 1px solid rgba(99, 102, 241, 0.2);
-      border-radius: 12px;
-      padding: 1.2rem;
-      text-align: center;
-      transition: all 0.3s ease;
-      cursor: pointer;
-      text-decoration: none;
-      color: var(--text-primary);
-      display: block;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .contact-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: var(--gradient);
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-
-    .contact-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
-    }
-
-    .contact-card:hover::before {
-      opacity: 0.1;
-    }
-
-    .contact-icon {
-      font-size: 2rem;
-      margin-bottom: 0.8rem;
-      transition: transform 0.3s ease;
-    }
-
-    .contact-card:hover .contact-icon {
-      transform: scale(1.1);
-    }
-
-    .contact-name {
-      font-weight: 600;
-      font-size: 1rem;
-      margin-bottom: 0.3rem;
-    }
-
-    .contact-handle {
-      font-size: 0.8rem;
-      color: var(--text-secondary);
-    }
-
-    /* Special styling for different platforms */
-    .facebook { color: #1877f2; }
-    .linkedin { color: #0077b5; }
-    .github { color: #ffffff; }
-    .email { color: #ea4335; }
-    .zalo { color: #0068ff; }
-    .hackerrank { color: #00ea64; }
-    .phone { color: #25d366; }
-    .telegram { color: #0088cc; }
-
-    /* Quick Actions */
-    .quick-actions {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      margin-top: 2rem;
-    }
-
-    .action-btn {
-      padding: 0.8rem 1.5rem;
-      background: var(--gradient);
-      color: white;
-      border: none;
-      border-radius: 25px;
-      font-weight: 500;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .action-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 5px 20px rgba(99, 102, 241, 0.4);
-    }
-
-    /* QR Section */
-    .qr-section {
-      text-align: center;
-      margin-top: 2rem;
-      padding: 1.5rem;
-      background: rgba(99, 102, 241, 0.05);
-      border-radius: 12px;
-      border: 1px solid rgba(99, 102, 241, 0.1);
-    }
-
-    .qr-code {
-      width: 150px;
-      height: 150px;
-      margin: 1rem auto;
-      padding: 10px;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    }
-
-    .qr-code img {
-      width: 100%;
-      height: 100%;
-    }
-
-    /* Status */
-    .status {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-      margin-top: 1rem;
-      color: var(--text-secondary);
-      font-size: 0.9rem;
-    }
-
-    .status-dot {
-      width: 8px;
-      height: 8px;
-      background: #10b981;
-      border-radius: 50%;
-      animation: pulse 2s infinite;
-    }
-
-    @keyframes pulse {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.5; transform: scale(1.2); }
-    }
-
-    /* Language Toggle */
-    .lang-toggle {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      display: flex;
-      gap: 0.5rem;
-      background: var(--bg-card);
-      padding: 0.5rem;
-      border-radius: 25px;
-      border: 1px solid rgba(148, 163, 184, 0.1);
-    }
-
-    .lang-btn {
-      padding: 0.5rem 1rem;
-      background: transparent;
-      border: none;
-      color: var(--text-secondary);
-      cursor: pointer;
-      border-radius: 20px;
-      transition: all 0.3s ease;
-      font-weight: 500;
-    }
-
-    .lang-btn.active {
-      background: var(--gradient);
-      color: white;
-    }
-
-    /* Animations */
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    /* Responsive */
-    @media (max-width: 480px) {
-      .container {
-        padding: 1rem;
-      }
-      
-      .profile-name {
-        font-size: 2rem;
-      }
-      
-      .contact-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      
-      .quick-actions {
-        flex-direction: column;
-      }
-      
-      .action-btn {
-        width: 100%;
-        justify-content: center;
-      }
-    }
-  </style>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="connect-style.css">
 </head>
 <body>
-  <!-- Language Toggle -->
-  <div class="lang-toggle">
-    <button class="lang-btn active" onclick="setLanguage('vi')">VI</button>
-    <button class="lang-btn" onclick="setLanguage('en')">EN</button>
+  <!-- Loading Screen -->
+  <div class="loading-screen" id="loadingScreen">
+    <div class="loader"></div>
   </div>
 
+  <!-- Theme Toggle -->
+  <div class="theme-toggle" id="themeToggle">
+    <i class="fas fa-moon"></i>
+  </div>
+
+  <!-- Language Toggle -->
+  <div class="lang-toggle">
+    <button class="lang-btn active" data-lang="vi">VI</button>
+    <button class="lang-btn" data-lang="en">EN</button>
+  </div>
+
+  <!-- Main Container -->
   <div class="container">
     <!-- Profile Section -->
-    <div class="profile-section">
+    <section class="profile-section">
       <div class="profile-image">
         <img src="img/tung.png" alt="Phạm Thanh Tùng">
+        <div class="status-indicator"></div>
       </div>
+      
       <h1 class="profile-name">Phạm Thanh Tùng</h1>
-      <p class="profile-title" data-lang="title">AI Engineer | Developer</p>
-      <p class="profile-bio" data-lang="bio">
-        Xin chào! Mình là Tùng, đam mê công nghệ và AI. Hãy kết nối với mình qua các kênh bên dưới nhé! 🚀
+      <p class="profile-title" data-translate="title">AI Engineer | Full Stack Developer</p>
+      
+      <p class="profile-bio" data-translate="bio">
+        Xin chào! Mình là Tùng, đam mê công nghệ AI và phát triển phần mềm. 
+        Hãy kết nối với mình để cùng chia sẻ và phát triển nhé! 🚀
       </p>
+      
       <div class="profile-info">
         <div class="info-item">
           <i class="fas fa-map-marker-alt"></i>
-          <span data-lang="location">Hà Nội, Việt Nam</span>
+          <span data-translate="location">Hà Nội, Việt Nam</span>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-graduation-cap"></i>
+          <span>VNU-UET</span>
         </div>
         <div class="info-item">
           <i class="fas fa-birthday-cake"></i>
           <span>2004</span>
         </div>
       </div>
-    </div>
+    </section>
+
+    <!-- Quick Stats -->
+    <section class="stats-section">
+      <div class="stat-card">
+        <div class="stat-number" data-count="5">0</div>
+        <div class="stat-label" data-translate="years-coding">Năm lập trình</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number" data-count="20">0</div>
+        <div class="stat-label" data-translate="projects">Dự án</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number" data-count="10">0</div>
+        <div class="stat-label" data-translate="technologies">Công nghệ</div>
+      </div>
+    </section>
 
     <!-- Connect Section -->
-    <div class="connect-section">
-      <h2 class="section-title" data-lang="connect-title">Kết Nối Với Mình</h2>
+    <section class="connect-section">
+      <h2 class="section-title" data-translate="connect-title">
+        <i class="fas fa-link"></i>
+        Kết Nối Với Mình
+      </h2>
       
       <div class="contact-grid">
-        <a href="https://www.facebook.com/phamthanhtung35nb" target="_blank" class="contact-card">
-          <i class="fab fa-facebook contact-icon facebook"></i>
-          <div class="contact-name">Facebook</div>
-          <div class="contact-handle">@phamthanhtung35nb</div>
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/phamthanhtung35nb" target="_blank" class="contact-card" data-platform="facebook">
+          <div class="card-icon">
+            <i class="fab fa-facebook-f"></i>
+          </div>
+          <div class="card-content">
+            <h3>Facebook</h3>
+            <p>@phamthanhtung35nb</p>
+          </div>
+          <div class="card-arrow">
+            <i class="fas fa-arrow-right"></i>
+          </div>
         </a>
 
-        <a href="https://www.linkedin.com/in/phamthanhtung35nb" target="_blank" class="contact-card">
-          <i class="fab fa-linkedin contact-icon linkedin"></i>
-          <div class="contact-name">LinkedIn</div>
-          <div class="contact-handle">Phạm Thanh Tùng</div>
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/phamthanhtung35nb" target="_blank" class="contact-card" data-platform="linkedin">
+          <div class="card-icon">
+            <i class="fab fa-linkedin-in"></i>
+          </div>
+          <div class="card-content">
+            <h3>LinkedIn</h3>
+            <p>Phạm Thanh Tùng</p>
+          </div>
+          <div class="card-arrow">
+            <i class="fas fa-arrow-right"></i>
+          </div>
         </a>
 
-        <a href="https://github.com/phamthanhtung35NB" target="_blank" class="contact-card">
-          <i class="fab fa-github contact-icon github"></i>
-          <div class="contact-name">GitHub</div>
-          <div class="contact-handle">@phamthanhtung35NB</div>
+        <!-- GitHub -->
+        <a href="https://github.com/phamthanhtung35NB" target="_blank" class="contact-card" data-platform="github">
+          <div class="card-icon">
+            <i class="fab fa-github"></i>
+          </div>
+          <div class="card-content">
+            <h3>GitHub</h3>
+            <p>@phamthanhtung35NB</p>
+          </div>
+          <div class="card-arrow">
+            <i class="fas fa-arrow-right"></i>
+          </div>
         </a>
 
-        <a href="mailto:tungpham010203@gmail.com" class="contact-card">
-          <i class="fas fa-envelope contact-icon email"></i>
-          <div class="contact-name">Email</div>
-          <div class="contact-handle">tungpham010203</div>
+        <!-- Email -->
+        <a href="mailto:tungpham010203@gmail.com" class="contact-card" data-platform="email">
+          <div class="card-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="card-content">
+            <h3>Email</h3>
+            <p>tungpham010203@gmail.com</p>
+          </div>
+          <div class="card-arrow">
+            <i class="fas fa-arrow-right"></i>
+          </div>
         </a>
 
-        <a href="#" onclick="showZaloQR()" class="contact-card">
-          <i class="fas fa-comment-dots contact-icon zalo"></i>
-          <div class="contact-name">Zalo</div>
-          <div class="contact-handle" data-lang="scan-qr">Quét mã QR</div>
+        <!-- Zalo -->
+        <div class="contact-card" data-platform="zalo" onclick="toggleZaloQR()">
+          <div class="card-icon">
+            <i class="fas fa-comment-dots"></i>
+          </div>
+          <div class="card-content">
+            <h3>Zalo</h3>
+            <p data-translate="scan-qr">Quét mã QR</p>
+          </div>
+          <div class="card-arrow">
+            <i class="fas fa-qrcode"></i>
+          </div>
+        </div>
+
+        <!-- Phone -->
+        <a href="tel:+84xxxxxxxxx" class="contact-card" data-platform="phone">
+          <div class="card-icon">
+            <i class="fas fa-phone"></i>
+          </div>
+          <div class="card-content">
+            <h3>Phone</h3>
+            <p data-translate="call-me">Gọi cho mình</p>
+          </div>
+          <div class="card-arrow">
+            <i class="fas fa-arrow-right"></i>
+          </div>
         </a>
 
-        <a href="https://www.hackerrank.com/profile/phamthanhtung35n" target="_blank" class="contact-card">
-          <i class="fab fa-hackerrank contact-icon hackerrank"></i>
-          <div class="contact-name">HackerRank</div>
-          <div class="contact-handle">@phamthanhtung35n</div>
+        <!-- Instagram -->
+        <a href="https://instagram.com/username" target="_blank" class="contact-card" data-platform="instagram">
+          <div class="card-icon">
+            <i class="fab fa-instagram"></i>
+          </div>
+          <div class="card-content">
+            <h3>Instagram</h3>
+            <p>@username</p>
+          </div>
+          <div class="card-arrow">
+            <i class="fas fa-arrow-right"></i>
+          </div>
         </a>
+
+        <!-- Discord -->
+        <div class="contact-card" data-platform="discord" onclick="copyDiscord()">
+          <div class="card-icon">
+            <i class="fab fa-discord"></i>
+          </div>
+          <div class="card-content">
+            <h3>Discord</h3>
+            <p>username#0000</p>
+          </div>
+          <div class="card-arrow">
+            <i class="fas fa-copy"></i>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <!-- Quick Actions -->
-      <div class="quick-actions">
-        <a href="mailto:tungpham010203@gmail.com" class="action-btn">
-          <i class="fas fa-paper-plane"></i>
-          <span data-lang="send-email">Gửi Email</span>
-        </a>
-        <a href="#" onclick="showZaloQR()" class="action-btn">
-          <i class="fas fa-qrcode"></i>
-          <span data-lang="add-zalo">Thêm Zalo</span>
-        </a>
+    <!-- Quick Actions -->
+    <section class="actions-section">
+      <div class="dropdown">
+        <button class="action-btn primary" onclick="toggleDownloadMenu()">
+          <i class="fas fa-download"></i>
+          <span data-translate="download-vcard">Tải danh thiếp</span>
+          <i class="fas fa-chevron-down dropdown-icon"></i>
+        </button>
+        <div class="dropdown-menu" id="downloadMenu">
+          <a href="#" onclick="downloadVCard()" class="dropdown-item">
+            <i class="fas fa-address-card"></i>
+            <div>
+              <span>vCard (.vcf)</span>
+              <small data-translate="vcf-desc">Lưu vào danh bạ</small>
+            </div>
+          </a>
+          <a href="#" onclick="downloadQRCode()" class="dropdown-item">
+            <i class="fas fa-qrcode"></i>
+            <div>
+              <span>QR Code</span>
+              <small data-translate="qr-desc">Ảnh mã QR liên hệ</small>
+            </div>
+          </a>
+          <a href="#" onclick="saveToHomeScreen()" class="dropdown-item">
+            <i class="fas fa-mobile-alt"></i>
+            <div>
+              <span>Add to Home</span>
+              <small data-translate="home-desc">Thêm vào màn hình chính</small>
+            </div>
+          </a>
+          <a href="#" onclick="downloadAllInfo()" class="dropdown-item">
+            <i class="fas fa-file-alt"></i>
+            <div>
+              <span>Text File</span>
+              <small data-translate="txt-desc">File text thông tin</small>
+            </div>
+          </a>
+        </div>
       </div>
+      
+      <button class="action-btn secondary" onclick="shareProfile()">
+        <i class="fas fa-share-alt"></i>
+        <span data-translate="share-profile">Chia sẻ trang</span>
+      </button>
+    </section>
 
-      <!-- QR Section (Hidden by default) -->
-      <div class="qr-section" id="qrSection" style="display: none;">
-        <h3 data-lang="zalo-qr-title">Quét mã để thêm Zalo</h3>
+    <!-- Footer -->
+    <footer class="footer">
+      <p data-translate="footer-text">© 2024 Phạm Thanh Tùng. Made with ❤️</p>
+    </footer>
+  </div>
+
+  <!-- Zalo QR Modal -->
+  <div class="modal" id="zaloModal">
+    <div class="modal-overlay" onclick="toggleZaloQR()"></div>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 data-translate="zalo-qr-title">Quét mã để thêm Zalo</h3>
+        <button class="modal-close" onclick="toggleZaloQR()">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="modal-body">
         <div class="qr-code">
           <img src="img/qr.jpg" alt="Zalo QR Code">
         </div>
-        <p style="color: var(--text-secondary); font-size: 0.9rem;" data-lang="qr-instruction">
-          Mở Zalo > Quét mã QR để kết bạn
+        <p data-translate="qr-instruction">
+          Mở Zalo → Quét mã QR để kết bạn
         </p>
       </div>
     </div>
-
-    <!-- Status -->
-    <div class="status">
-      <span class="status-dot"></span>
-      <span data-lang="status">Sẵn sàng kết nối</span>
-    </div>
   </div>
 
-  <script>
-    // Translation data
-    const translations = {
-      vi: {
-        'title': 'AI Engineer | Developer',
-        'bio': 'Xin chào! Mình là Tùng, đam mê công nghệ và AI. Hãy kết nối với mình qua các kênh bên dưới nhé! 🚀',
-        'location': 'Hà Nội, Việt Nam',
-        'connect-title': 'Kết Nối Với Mình',
-        'scan-qr': 'Quét mã QR',
-        'send-email': 'Gửi Email',
-        'add-zalo': 'Thêm Zalo',
-        'zalo-qr-title': 'Quét mã để thêm Zalo',
-        'qr-instruction': 'Mở Zalo > Quét mã QR để kết bạn',
-        'status': 'Sẵn sàng kết nối'
-      },
-      en: {
-        'title': 'AI Engineer | Developer',
-        'bio': 'Hi! I\'m Tung, passionate about technology and AI. Let\'s connect through the channels below! 🚀',
-        'location': 'Hanoi, Vietnam',
-        'connect-title': 'Connect With Me',
-        'scan-qr': 'Scan QR Code',
-        'send-email': 'Send Email',
-        'add-zalo': 'Add Zalo',
-        'zalo-qr-title': 'Scan to add Zalo',
-        'qr-instruction': 'Open Zalo > Scan QR code to connect',
-        'status': 'Available to connect'
-      }
-    };
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">
+    <i class="fas fa-check-circle"></i>
+    <span id="toastMessage">Copied!</span>
+  </div>
 
-    let currentLang = 'vi';
-
-    function setLanguage(lang) {
-      currentLang = lang;
-      document.querySelectorAll('.lang-btn').forEach(btn => {
-        btn.classList.remove('active');
-      });
-      event.target.classList.add('active');
-      
-      document.querySelectorAll('[data-lang]').forEach(element => {
-        const key = element.getAttribute('data-lang');
-        if (translations[lang][key]) {
-          element.textContent = translations[lang][key];
-        }
-      });
-    }
-
-    function showZaloQR() {
-      const qrSection = document.getElementById('qrSection');
-      if (qrSection.style.display === 'none') {
-        qrSection.style.display = 'block';
-        qrSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      } else {
-        qrSection.style.display = 'none';
-      }
-    }
-
-    // Add entrance animations
-    document.addEventListener('DOMContentLoaded', () => {
-      const cards = document.querySelectorAll('.contact-card');
-      cards.forEach((card, index) => {
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(20px)';
-        setTimeout(() => {
-          card.style.transition = 'all 0.5s ease';
-          card.style.opacity = '1';
-          card.style.transform = 'translateY(0)';
-        }, 100 * index);
-      });
-    });
-  </script>
+  <!-- Custom JavaScript -->
+  <script src="connect-app.js"></script>
+  
+  <!-- PWA Support -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#667eea">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Tung Connect">
 </body>
 </html>
